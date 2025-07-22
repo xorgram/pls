@@ -1,5 +1,3 @@
 {
-  "tasks": {
-    "test": "deno run -A test.ts"
-  }
+  "name": "@xorgram/pls"
 }
