@@ -1,0 +1,5 @@
+{
+  "name": "@xorgram/pls",
+  "exports": "./mod.ts",
+  "lock": false
+}

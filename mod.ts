@@ -1,4 +1,4 @@
-import { Adapter } from "./adapter.ts";
+import type { Adapter } from "./adapter.ts";
 
 export interface Config {
   /**
@@ -70,7 +70,7 @@ export async function setup(config_?: Config) {
         switch (url.protocol) {
           case "mongodb:": {
             const { MongoClient } = await import(
-              "https://deno.land/x/mongo@v0.31.0/mod.ts"
+              "https://deno.land/x/mongo@v0.34.0/mod.ts"
             );
             const client = new MongoClient();
             await client.connect(uri);
@@ -83,18 +83,20 @@ export async function setup(config_?: Config) {
           case "postgres:":
           case "postgresql:": {
             const { Client } = await import(
-              "https://deno.land/x/postgres@v0.16.1/mod.ts"
+              "https://deno.land/x/postgres@v0.19.5/mod.ts"
             );
             const client = new Client(uri);
             await client.connect();
             const { PostgresAdapter } = await import("./adapters/postgres.ts");
-            config.adapter = await new PostgresAdapter(client, "ls")
-              .initialize();
+            config.adapter = await new PostgresAdapter(
+              client,
+              "ls",
+            ).initialize();
             break;
           }
           case "redis:": {
             const { connect, parseURL } = await import(
-              "https://deno.land/x/redis@v0.26.0/mod.ts"
+              "https://deno.land/x/redis@v0.40.0/mod.ts"
             );
             const redis = await connect(parseURL(uri));
             const { RedisAdapter } = await import("./adapters/redis.ts");
@@ -106,9 +108,7 @@ export async function setup(config_?: Config) {
     }
   }
   if (!config.adapter) {
-    throw new Error(
-      "PLS_CONNECTION_URI is not set, invalid or not supported",
-    );
+    throw new Error("PLS_CONNECTION_URI is not set, invalid or not supported");
   }
   config.ttl = typeof config_?.ttl !== "undefined" ? config_.ttl : 20000;
   if (config_?.include) {
@@ -132,28 +132,30 @@ function flush_() {
   if (!adapter) {
     throw new Error("Cannot flush before setting up");
   }
-  Promise.resolve().then(async () => {
-    const { previousItems } = config;
-    const currentItems = Object.fromEntries(Object.entries(localStorage));
-    let toSet = Object.entries(currentItems).filter(([k]) => isIncluded(k));
-    toSet = previousItems
-      ? toSet.filter(([k, v]) =>
-        previousItems[k] == undefined || previousItems[k] != v
-      )
-      : toSet;
-    const toDelete = previousItems
-      ? Object.keys(previousItems).filter((v) =>
-        !Object.keys(currentItems).includes(v)
-      )
-      : [];
-    if (toSet.length != 0) {
-      await adapter.setItems(Object.fromEntries(toSet));
-    }
-    if (toDelete.length != 0) {
-      await adapter.deleteItems(toDelete);
-    }
-    config.previousItems = currentItems;
-  }).catch((err) => console.warn("Could not flush localStorage:", err));
+  Promise.resolve()
+    .then(async () => {
+      const { previousItems } = config;
+      const currentItems = Object.fromEntries(Object.entries(localStorage));
+      let toSet = Object.entries(currentItems).filter(([k]) => isIncluded(k));
+      toSet = previousItems
+        ? toSet.filter(
+          ([k, v]) => previousItems[k] == undefined || previousItems[k] != v,
+        )
+        : toSet;
+      const toDelete = previousItems
+        ? Object.keys(previousItems).filter(
+          (v) => !Object.keys(currentItems).includes(v),
+        )
+        : [];
+      if (toSet.length != 0) {
+        await adapter.setItems(Object.fromEntries(toSet));
+      }
+      if (toDelete.length != 0) {
+        await adapter.deleteItems(toDelete);
+      }
+      config.previousItems = currentItems;
+    })
+    .catch((err) => console.warn("Could not flush localStorage:", err));
 }
 
 export function flush() {

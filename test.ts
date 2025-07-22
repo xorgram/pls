@@ -3,11 +3,11 @@ import {
   assertExists,
   assertRejects,
   assertThrows,
-} from "https://deno.land/std@0.151.0/testing/asserts.ts";
-import { Adapter } from "./adapter.ts";
+} from "jsr:@std/assert";
 import { flush, setup } from "./mod.ts";
+import type { Adapter } from "./adapter.ts";
 
-const testAdapter = new class implements Adapter {
+const testAdapter = new (class implements Adapter {
   items: Record<string, string> = {};
 
   setItems(items: Record<string, string>) {
@@ -23,7 +23,7 @@ const testAdapter = new class implements Adapter {
       Object.entries(this.items).filter(([k]) => !items.includes(k)),
     );
   }
-}();
+})();
 
 function wait(duration = 10) {
   return new Promise((r) => setTimeout(r, duration));
