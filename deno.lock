@@ -1,0 +1,122 @@
+{
+  "version": "5",
+  "specifiers": {
+    "jsr:@lucsoft/web-bson@0.4": "0.4.0",
+    "jsr:@std/assert@*": "1.0.13",
+    "jsr:@std/async@1": "1.0.13",
+    "jsr:@std/bytes@1": "1.0.6",
+    "jsr:@std/bytes@^1.0.2-rc.3": "1.0.6",
+    "jsr:@std/crypto@^1.0.3": "1.0.5",
+    "jsr:@std/encoding@^1.0.5": "1.0.10",
+    "jsr:@std/internal@^1.0.6": "1.0.9",
+    "jsr:@std/io@0.224.5": "0.224.5"
+  },
+  "jsr": {
+    "@lucsoft/web-bson@0.4.0": {
+      "integrity": "8ede9f3c223dd6095869fae84e99dcf0f12da52f37426e22d57181ecc5524308"
+    },
+    "@std/assert@1.0.13": {
+      "integrity": "ae0d31e41919b12c656c742b22522c32fb26ed0cba32975cb0de2a273cb68b29",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    },
+    "@std/async@1.0.13": {
+      "integrity": "1d76ca5d324aef249908f7f7fe0d39aaf53198e5420604a59ab5c035adc97c96"
+    },
+    "@std/bytes@1.0.6": {
+      "integrity": "f6ac6adbd8ccd99314045f5703e23af0a68d7f7e58364b47d2c7f408aeb5820a"
+    },
+    "@std/crypto@1.0.5": {
+      "integrity": "0dcfbb319fe0bba1bd3af904ceb4f948cde1b92979ec1614528380ed308a3b40"
+    },
+    "@std/encoding@1.0.10": {
+      "integrity": "8783c6384a2d13abd5e9e87a7ae0520a30e9f56aeeaa3bdf910a3eaaf5c811a1"
+    },
+    "@std/internal@1.0.9": {
+      "integrity": "bdfb97f83e4db7a13e8faab26fb1958d1b80cc64366501af78a0aee151696eb8"
+    },
+    "@std/io@0.224.5": {
+      "integrity": "cb84fe655d1273fca94efcff411465027a8b0b4225203f19d6ee98d9c8920a2d",
+      "dependencies": [
+        "jsr:@std/bytes@^1.0.2-rc.3"
+      ]
+    }
+  },
+  "remote": {
+    "https://deno.land/x/mongo@v0.34.0/deps.ts": "c9ef5cc7fbe0d84c349590dca175abcf62988b1f87c2efda47e47d3f20fb741d",
+    "https://deno.land/x/mongo@v0.34.0/mod.ts": "a1f5b1e6932d472d1fca02ebef025e4f964b0bca62b8ead77415ec49870cd7f2",
+    "https://deno.land/x/mongo@v0.34.0/src/auth/base.ts": "84ae5dec934f9bedb4a941c7c0dbac5f138a836e2792463e5bd97fd8ab51501e",
+    "https://deno.land/x/mongo@v0.34.0/src/auth/mod.ts": "b161611bd5be9e9d1b4497227c8ea93ad4daadcd98038c9e5a707bc5da7a25ca",
+    "https://deno.land/x/mongo@v0.34.0/src/auth/pbkdf2.ts": "1f1db192fd37869d118ab34780b64567ebcf0ad83a03ef28b3d740cae9adb47a",
+    "https://deno.land/x/mongo@v0.34.0/src/auth/scram.ts": "c3c62333338243c201e5d9fe5eee855f78223835cdb7bead5bebd4dfb91a6ac2",
+    "https://deno.land/x/mongo@v0.34.0/src/auth/x509.ts": "a9a4369abc70ce48e3fae528ebe192371deeae597f2c3c54872e7b3a2a53d282",
+    "https://deno.land/x/mongo@v0.34.0/src/client.ts": "066a6ef58d657f9050b3d7ce4b7e8f1492705dbc252486abc6a2c8ef0794f48c",
+    "https://deno.land/x/mongo@v0.34.0/src/cluster.ts": "3692f1d56ac8bced43de543aa536073628933d23af2339f19453b2a057b2d017",
+    "https://deno.land/x/mongo@v0.34.0/src/collection/collection.ts": "73676cd440de88aa5b76af652c9f873b1cf5651ef53c3c2795f7d11b8a82ff7b",
+    "https://deno.land/x/mongo@v0.34.0/src/collection/commands/aggregate.ts": "d11c85c30add147c8dc35a73165c7c10d0a2afc9cb447b10b37b823303b71bc0",
+    "https://deno.land/x/mongo@v0.34.0/src/collection/commands/find.ts": "44b8df95897339d6df01505cec9c636db527f42e2a0b6a56d06fc3f2914c1d50",
+    "https://deno.land/x/mongo@v0.34.0/src/collection/commands/list_indexes.ts": "468867f9d687c69ae326e9e9b26cb026fffe3f2f7d2348b5cf14fcea85782028",
+    "https://deno.land/x/mongo@v0.34.0/src/collection/commands/update.ts": "6c111bf410b6479bb1ba2f194d0ad999d78047910b49fc3e62763e15d6b697b0",
+    "https://deno.land/x/mongo@v0.34.0/src/collection/mod.ts": "bd791a0b9b46be4365f88c54893584eadec2f8cd799db9eb05e0b5b4c8d72b8e",
+    "https://deno.land/x/mongo@v0.34.0/src/database.ts": "acac1dbedb14620d91ac7de787761dec0ec7901f655d1d05c06eaf145da7094a",
+    "https://deno.land/x/mongo@v0.34.0/src/error.ts": "4e3e4f3bf487c1ff23e3bcf1481c8855ec871f6737a923e892589bb64ad349df",
+    "https://deno.land/x/mongo@v0.34.0/src/gridfs/bucket.ts": "323843afa490d7a41e583492dc3bab3751d393d80d0f5b2cffa35ca1514b7966",
+    "https://deno.land/x/mongo@v0.34.0/src/gridfs/indexes.ts": "50bcbcddb751ee5b31efb840154cad4a68d1212e9cf594a5d45d07a8ec7ea6e0",
+    "https://deno.land/x/mongo@v0.34.0/src/gridfs/upload.ts": "57823aacb41262c83ad6f1faefaa4c327d9cec33b5d46ff720ba36e27f1eb8f5",
+    "https://deno.land/x/mongo@v0.34.0/src/protocol/cursor.ts": "3fd33cf303f95a11c5d9cea9da6435384d991315027ef298f0d144b4578d3009",
+    "https://deno.land/x/mongo@v0.34.0/src/protocol/handshake.ts": "306d30a76f9de33aa7b2670a7b43c5736f5353bc8dace6bd7d9f2837ab83856d",
+    "https://deno.land/x/mongo@v0.34.0/src/protocol/header.ts": "0f28db842f886e57b7013606c1391affab2e2960a1a4568d2502e7b788117716",
+    "https://deno.land/x/mongo@v0.34.0/src/protocol/message.ts": "4a23137d4c71b61c4a8f636c1fcfeb20dd436441322bb50cad02483db49373aa",
+    "https://deno.land/x/mongo@v0.34.0/src/protocol/mod.ts": "c5f626711e5c1347d98400a18d252306390f76f81335acb4f871a2b45d8d89bb",
+    "https://deno.land/x/mongo@v0.34.0/src/protocol/protocol.ts": "6dae1ced4e1215df8938b5f648bf79a8f7fc80964f5c190538c66e67ba7dd8b2",
+    "https://deno.land/x/mongo@v0.34.0/src/types.ts": "6fd5feec514a6b551743014cee3963d66476d50f6d44d05e2a3d0ee074f45fab",
+    "https://deno.land/x/mongo@v0.34.0/src/utils/ns.ts": "fb0c57b8dc4d31f8993112d267dec3c163d3e8862198d1cd03b2b51bcc3caad9",
+    "https://deno.land/x/mongo@v0.34.0/src/utils/saslprep/load_code_points.ts": "88c3bee38b2f3e22a2900332ca69f443759b4772bfa65463d8871c9e895f1299",
+    "https://deno.land/x/mongo@v0.34.0/src/utils/saslprep/memory_pager.ts": "f55a79a13ec569c21630c3915a9af0c6fc0aa2b899121fa2a85a813c6dd4afba",
+    "https://deno.land/x/mongo@v0.34.0/src/utils/saslprep/mod.ts": "9690b73882738d77c929ceac180b3a6fee9db90e69a5518f3692f0d7cb67f198",
+    "https://deno.land/x/mongo@v0.34.0/src/utils/saslprep/sparse_bitfield.ts": "34b487925e62c1ea57818eef0f1dbb305db4002f75797ee4db9dfa796a0125fd",
+    "https://deno.land/x/mongo@v0.34.0/src/utils/srv.ts": "8f741cf9008c111c1257ce2a750c27f82c9b42b3f8541604608eb3263835c710",
+    "https://deno.land/x/mongo@v0.34.0/src/utils/uri.ts": "855a5e7d9436084cfe2d5b29fb93664b2b940b3c885d6c4438f1fb40926a5350",
+    "https://deno.land/x/postgres@v0.19.5/client.ts": "f8395fb22363ff012841dd4e35ee14404ecd649f9e90041c615a3251b94ebab2",
+    "https://deno.land/x/postgres@v0.19.5/client/error.ts": "03e959971d421acd8064574f29550f4b6911634c984e58860306e9802e5fc991",
+    "https://deno.land/x/postgres@v0.19.5/connection/auth.ts": "96a8ce1798ad5ef615dc3b4c03d1ae9bb4b9f9e9f85f6430e4ac2b362725bb66",
+    "https://deno.land/x/postgres@v0.19.5/connection/connection.ts": "16d24bfc0649e5c0a178f4a3ba7044d5549226821093060a172734e211df33de",
+    "https://deno.land/x/postgres@v0.19.5/connection/connection_params.ts": "a7a55ce22e7f45b12d94191291a03b089f1133828098dbbc614fc6d9a5f5e154",
+    "https://deno.land/x/postgres@v0.19.5/connection/message.ts": "20da5d80fc4d7ddb7b850083e0b3fa8734eb26642221dad89c62e27d78e57a4d",
+    "https://deno.land/x/postgres@v0.19.5/connection/message_code.ts": "cfbc0f2a557a91637755e8cbed41d1f8536ffb47fdd5a8957e08625a830bbc12",
+    "https://deno.land/x/postgres@v0.19.5/connection/packet.ts": "17eb42ca261b4d58b4fae945b960c333ca76fa9b0bad5803b7636909e09897fc",
+    "https://deno.land/x/postgres@v0.19.5/connection/scram.ts": "4c138a1d9d866a8bb1c4386837a6a1ee9481b57380561a722439dbb0ecc215d6",
+    "https://deno.land/x/postgres@v0.19.5/debug.ts": "8add17699191f11e6830b8c95d9de25857d221bb2cf6c4ae22254d395895c1f9",
+    "https://deno.land/x/postgres@v0.19.5/mod.ts": "fd97a0e3e8db9318e327b0bca583114718653b61a131099af82a6afb9dbe3a69",
+    "https://deno.land/x/postgres@v0.19.5/pool.ts": "7b468e6e05044a0a68402379863c221d90aea701be70db482cc2fdab5ff3ca2f",
+    "https://deno.land/x/postgres@v0.19.5/query/array_parser.ts": "a044d6ee1a4dc685deac37116e025abe7fdc5bf7d18f3b3db36c3e9023468710",
+    "https://deno.land/x/postgres@v0.19.5/query/decode.ts": "7479fd7aea65c871a6bf0a38032d1091933b3d7ecb81ed5224cd7309fe5e68f6",
+    "https://deno.land/x/postgres@v0.19.5/query/decoders.ts": "ff58328637128ce6ca26964063e6a491566ab2defc7bd0d07a8c6fa57c422dfb",
+    "https://deno.land/x/postgres@v0.19.5/query/encode.ts": "2e9fc0c54f241ddec70d5f62a6ab7c060039101a8c8df7111f42f7996ab8453d",
+    "https://deno.land/x/postgres@v0.19.5/query/oid.ts": "21fc714ac212350ba7df496f88ea9e01a4ee0458911d0f2b6a81498e12e7af4c",
+    "https://deno.land/x/postgres@v0.19.5/query/query.ts": "a94abb12d5365eb64cfe5b6a84bb0a8a5aa6c9d92f588861825974765d4af803",
+    "https://deno.land/x/postgres@v0.19.5/query/transaction.ts": "d6989379be861d4673a72189ef245670dc884f93d2f723993052eae20cbfc545",
+    "https://deno.land/x/postgres@v0.19.5/utils/deferred.ts": "45651f19a1524f88414bbc9326ae1534854afe03f5b7537f713a3655ed2d7b9a",
+    "https://deno.land/x/postgres@v0.19.5/utils/utils.ts": "ff3abca25712fc0a1543103f8ebed057ae9d2bc251e286c883ac65e86fcdc6c9",
+    "https://deno.land/x/redis@v0.40.0/backoff.ts": "33e4a6e245f8743fbae0ce583993a671a3ac2ecee433a3e7f0bd77b5dd541d84",
+    "https://deno.land/x/redis@v0.40.0/client.ts": "a64d010d6be7c05ec73002506ca19210ec8bf336987e2b954a12f7b8bdb395c7",
+    "https://deno.land/x/redis@v0.40.0/connection.ts": "0cb6b4f006051106229b0dbfa09be2ca3b65fec18899c4019b4ffbcdd549f14f",
+    "https://deno.land/x/redis@v0.40.0/deps/std/async.ts": "5a588aefb041cca49f0e6b7e3c397119693a3e07bea89c54cf7fe4a412e37bbf",
+    "https://deno.land/x/redis@v0.40.0/deps/std/bytes.ts": "f5b437ebcac77600101a81ef457188516e4944b3c2a931dff5ced3fa0c239b62",
+    "https://deno.land/x/redis@v0.40.0/deps/std/io.ts": "b7505c5e738384f5f7a021d7bbd78380490c059cc7c83cd8dada1f86ec16e835",
+    "https://deno.land/x/redis@v0.40.0/errors.ts": "8293f56a70ea8388cb80b6e1caa15d350ed1719529fc06573b01a443d0caad69",
+    "https://deno.land/x/redis@v0.40.0/internal/encoding.ts": "0525f7f444a96b92cd36423abdfe221f8d8de4a018dc5cb6750a428a5fc897c2",
+    "https://deno.land/x/redis@v0.40.0/internal/symbols.ts": "e36097bab1da1c9fe84a3bb9cb0ed1ec10c3dc7dd0b557769c5c54e15d110dd2",
+    "https://deno.land/x/redis@v0.40.0/mod.ts": "48e4c8d4c5522766ec2a11059a4f3c48bf60ec618fca6444734beeafda308d9f",
+    "https://deno.land/x/redis@v0.40.0/pipeline.ts": "a32e5f1061982819e97af6ee15f76f75b7edb370800f612b66531558e94b5281",
+    "https://deno.land/x/redis@v0.40.0/protocol/deno_streams/command.ts": "5c5e5fb639cae22c1f9bfdc87631edcd67bb28bf8590161ae484d293b733aa01",
+    "https://deno.land/x/redis@v0.40.0/protocol/deno_streams/mod.ts": "b084bf64d6b795f6c1d0b360d9be221e246a9c033e5d88fd1e82fa14f711d25b",
+    "https://deno.land/x/redis@v0.40.0/protocol/deno_streams/reply.ts": "639de34541f207f793393a3cd45f9a23ef308f094d9d3d6ce62f84b175d3af47",
+    "https://deno.land/x/redis@v0.40.0/protocol/shared/command.ts": "e75f6be115ff73bd865e01be4e2a28077a9993b1e0c54ed96b6825bfe997d382",
+    "https://deno.land/x/redis@v0.40.0/protocol/shared/reply.ts": "3311ff66357bacbd60785cb43b97539c341d8a7d963bc5e80cb864ac81909ea5",
+    "https://deno.land/x/redis@v0.40.0/protocol/shared/types.ts": "c6bf2b9eafd69e358a972823d94b8b478c00bac195b87b33b7437de2a9bb7fb4",
+    "https://deno.land/x/redis@v0.40.0/redis.ts": "1f42f34578b318910e099dd6312e142cbb01d80660944675d31bd0ca739a0fff",
+    "https://deno.land/x/redis@v0.40.0/stream.ts": "d43076815d046eb8428fcd2799544a9fd07b3480099f5fc67d2ba12fdc73725f"
+  }
+}

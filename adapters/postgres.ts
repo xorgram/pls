@@ -1,9 +1,8 @@
-import { Client } from "https://deno.land/x/postgres@v0.16.1/mod.ts";
+import { Client } from "https://deno.land/x/postgres@v0.19.5/mod.ts";
 import { Adapter } from "../adapter.ts";
 
 export class PostgresAdapter implements Adapter {
-  constructor(protected client: Client, protected table: string) {
-  }
+  constructor(protected client: Client, protected table: string) {}
 
   // Credits to @Satont for his awesome work in grammyjs/storages
   async initialize() {
@@ -11,10 +10,9 @@ export class PostgresAdapter implements Adapter {
       key VARCHAR NOT NULL,
       value TEXT
     )`);
-    await this.client
-      .queryArray(
-        `CREATE UNIQUE INDEX IF NOT EXISTS IDX_${this.table} ON "${this.table}" (key)`,
-      );
+    await this.client.queryArray(
+      `CREATE UNIQUE INDEX IF NOT EXISTS IDX_${this.table} ON "${this.table}" (key)`,
+    );
     return this;
   }
 
@@ -23,7 +21,9 @@ export class PostgresAdapter implements Adapter {
     const entries = Object.entries(items);
     await this.client.queryArray(
       `DELETE FROM "${this.table}" WHERE key IN (${
-        keys.map((_, i) => `$${i + 1}`)
+        keys.map(
+          (_, i) => `$${i + 1}`,
+        )
       })` as unknown as TemplateStringsArray,
       ...keys,
     );

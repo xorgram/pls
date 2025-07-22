@@ -1,11 +1,10 @@
-import { type Collection } from "https://deno.land/x/mongo@v0.31.0/mod.ts";
+import { type Collection } from "https://deno.land/x/mongo@v0.34.0/mod.ts";
 import { Adapter } from "../adapter.ts";
 
 export class MongoAdapter implements Adapter {
   constructor(
     protected collection: Collection<{ key: string; value: string }>,
-  ) {
-  }
+  ) {}
 
   async setItems(items: Record<string, string>) {
     await this.collection.deleteMany({ key: { $in: Object.keys(items) } });
@@ -21,6 +20,6 @@ export class MongoAdapter implements Adapter {
   }
 
   async deleteItems(items: string[]) {
-    await this.collection.deleteMany(items.map((v) => ({ key: v })));
+    await this.collection.deleteMany({ key: { $in: items } });
   }
 }

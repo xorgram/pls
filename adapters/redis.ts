@@ -1,9 +1,8 @@
-import { Redis } from "https://deno.land/x/redis@v0.26.0/mod.ts";
+import { Redis } from "https://deno.land/x/redis@v0.40.0/mod.ts";
 import { Adapter } from "../adapter.ts";
 
 export class RedisAdapter implements Adapter {
-  constructor(protected redis: Redis) {
-  }
+  constructor(protected redis: Redis) {}
 
   async setItems(items: Record<string, string>) {
     const pipeline = this.redis.pipeline();
@@ -21,9 +20,9 @@ export class RedisAdapter implements Adapter {
     }
     const values = await pipeline.flush();
     return Object.fromEntries(
-      values.map((v, i) => [keys[i].slice(4), v]).filter(([v]) =>
-        typeof v === "string"
-      ),
+      values
+        .map((v, i) => [keys[i].slice(4), v])
+        .filter(([v]) => typeof v === "string"),
     );
   }
 
