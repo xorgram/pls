@@ -1,5 +1,5 @@
-import { type Collection } from "https://deno.land/x/mongo@v0.34.0/mod.ts";
-import { Adapter } from "../adapter.ts";
+import type { Collection } from "https://deno.land/x/mongo@v0.34.0/mod.ts";
+import type { Adapter } from "../adapter.ts";
 
 export class MongoAdapter implements Adapter {
   constructor(

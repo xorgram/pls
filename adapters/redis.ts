@@ -1,5 +1,5 @@
-import { Redis } from "https://deno.land/x/redis@v0.40.0/mod.ts";
-import { Adapter } from "../adapter.ts";
+import type { Redis } from "https://deno.land/x/redis@v0.40.0/mod.ts";
+import type { Adapter } from "../adapter.ts";
 
 export class RedisAdapter implements Adapter {
   constructor(protected redis: Redis) {}

@@ -1,5 +1,5 @@
-import { Client } from "https://deno.land/x/postgres@v0.19.5/mod.ts";
-import { Adapter } from "../adapter.ts";
+import type { Client } from "https://deno.land/x/postgres@v0.19.5/mod.ts";
+import type { Adapter } from "../adapter.ts";
 
 export class PostgresAdapter implements Adapter {
   constructor(protected client: Client, protected table: string) {}

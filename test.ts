@@ -4,8 +4,8 @@ import {
   assertRejects,
   assertThrows,
 } from "jsr:@std/assert";
-import { Adapter } from "./adapter.ts";
 import { flush, setup } from "./mod.ts";
+import type { Adapter } from "./adapter.ts";
 
 const testAdapter = new (class implements Adapter {
   items: Record<string, string> = {};

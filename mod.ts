@@ -1,4 +1,4 @@
-import { Adapter } from "./adapter.ts";
+import type { Adapter } from "./adapter.ts";
 
 export interface Config {
   /**
